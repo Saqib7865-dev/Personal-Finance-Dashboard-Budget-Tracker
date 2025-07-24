@@ -1,0 +1,498 @@
+@import "tailwindcss";
+
+@theme {
+  /* Light Theme */
+  --light-primary: #2563eb; /* Main brand blue */
+  --light-primary-hover: #1d4ed8; /* Darker blue for hover states */
+  --light-primary-light: #dbeafe; /* Light blue for backgrounds */
+
+  --light-success: #10b981; /* Green for income/positive */
+  --light-success-light: #d1fae5; /* Light green background */
+  --light-success-dark: #059669; /* Dark green for text */
+
+  --light-danger: #ef4444; /* Red for expenses/negative */
+  --light-danger-light: #fee2e2; /* Light red background */
+  --light-danger-dark: #dc2626; /* Dark red for text */
+
+  --light-warning: #f59e0b; /* Orange for warnings/pending */
+  --light-warning-light: #fef3c7; /* Light orange background */
+  --light-warning-dark: #d97706; /* Dark orange for text */
+
+  --light-info: #3b82f6; /* Blue for informational */
+  --light-info-light: #dbeafe; /* Light blue background */
+  --light-info-dark: #1e40af; /* Dark blue for text */
+
+  /* Neutral Colors - Light */
+  --light-bg-primary: #ffffff; /* Main background */
+  --light-bg-secondary: #f8fafc; /* Secondary background */
+  --light-bg-tertiary: #f1f5f9; /* Tertiary background (cards) */
+
+  --light-text-primary: #0f172a; /* Main text color */
+  --light-text-secondary: #475569; /* Secondary text */
+  --light-text-muted: #64748b; /* Muted text */
+  --light-text-disabled: #94a3b8; /* Disabled text */
+
+  --light-border-primary: #e2e8f0; /* Main borders */
+  --light-border-secondary: #cbd5e1; /* Secondary borders */
+  --light-border-focus: #2563eb; /* Focus borders */
+
+  --light-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --light-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --light-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* Dark Theme */
+  --dark-primary: #3b82f6; /* Brighter blue for dark mode */
+  --dark-primary-hover: #2563eb; /* Hover state */
+  --dark-primary-light: #1e3a8a; /* Dark blue background */
+
+  --dark-success: #22c55e; /* Brighter green for dark mode */
+  --dark-success-light: #15803d; /* Dark green background */
+  --dark-success-dark: #4ade80; /* Light green for text */
+
+  --dark-danger: #f87171; /* Softer red for dark mode */
+  --dark-danger-light: #991b1b; /* Dark red background */
+  --dark-danger-dark: #fca5a5; /* Light red for text */
+
+  --dark-warning: #fbbf24; /* Brighter orange for dark mode */
+  --dark-warning-light: #92400e; /* Dark orange background */
+  --dark-warning-dark: #fde047; /* Light orange for text */
+
+  --dark-info: #60a5fa; /* Brighter info blue */
+  --dark-info-light: #1e40af; /* Dark blue background */
+  --dark-info-dark: #93c5fd; /* Light blue for text */
+
+  /* Neutral Colors - Dark */
+  --dark-bg-primary: #0f172a; /* Main dark background */
+  --dark-bg-secondary: #1e293b; /* Secondary dark background */
+  --dark-bg-tertiary: #334155; /* Tertiary background (cards) */
+
+  --dark-text-primary: #f8fafc; /* Main text color */
+  --dark-text-secondary: #cbd5e1; /* Secondary text */
+  --dark-text-muted: #94a3b8; /* Muted text */
+  --dark-text-disabled: #64748b; /* Disabled text */
+
+  --dark-border-primary: #475569; /* Main borders */
+  --dark-border-secondary: #334155; /* Secondary borders */
+  --dark-border-focus: #3b82f6; /* Focus borders */
+
+  --dark-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --dark-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4),
+    0 2px 4px -2px rgb(0 0 0 / 0.4);
+  --dark-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4),
+    0 4px 6px -4px rgb(0 0 0 / 0.4);
+
+  /* Chart Colors for Data Visualization */
+  --chart-colors-light: #2563eb, #10b981, #f59e0b, #ef4444, #8b5cf6, #06b6d4,
+    #84cc16, #f97316;
+  --chart-colors-dark: #3b82f6, #22c55e, #fbbf24, #f87171, #a78bfa, #22d3ee,
+    #a3e635, #fb923c;
+
+  /* Category Colors */
+  --category-food: #ef4444; /* Red */
+  --category-transport: #3b82f6; /* Blue */
+  --category-entertainment: #8b5cf6; /* Purple */
+  --category-shopping: #f59e0b; /* Orange */
+  --category-health: #22c55e; /* Green */
+  --category-bills: #6366f1; /* Indigo */
+  --category-income: #10b981; /* Emerald */
+  --category-savings: #06b6d4; /* Cyan */
+}
+
+/* Usage Examples - Theme Classes */
+.light-theme {
+  --primary: var(--light-primary);
+  --primary-hover: var(--light-primary-hover);
+  --primary-light: var(--light-primary-light);
+  --success: var(--light-success);
+  --success-light: var(--light-success-light);
+  --success-dark: var(--light-success-dark);
+  --danger: var(--light-danger);
+  --danger-light: var(--light-danger-light);
+  --danger-dark: var(--light-danger-dark);
+  --warning: var(--light-warning);
+  --warning-light: var(--light-warning-light);
+  --warning-dark: var(--light-warning-dark);
+  --info: var(--light-info);
+  --info-light: var(--light-info-light);
+  --info-dark: var(--light-info-dark);
+  --bg-primary: var(--light-bg-primary);
+  --bg-secondary: var(--light-bg-secondary);
+  --bg-tertiary: var(--light-bg-tertiary);
+  --text-primary: var(--light-text-primary);
+  --text-secondary: var(--light-text-secondary);
+  --text-muted: var(--light-text-muted);
+  --text-disabled: var(--light-text-disabled);
+  --border-primary: var(--light-border-primary);
+  --border-secondary: var(--light-border-secondary);
+  --border-focus: var(--light-border-focus);
+  --shadow-sm: var(--light-shadow-sm);
+  --shadow-md: var(--light-shadow-md);
+  --shadow-lg: var(--light-shadow-lg);
+}
+
+.dark-theme {
+  --primary: var(--dark-primary);
+  --primary-hover: var(--dark-primary-hover);
+  --primary-light: var(--dark-primary-light);
+  --success: var(--dark-success);
+  --success-light: var(--dark-success-light);
+  --success-dark: var(--dark-success-dark);
+  --danger: var(--dark-danger);
+  --danger-light: var(--dark-danger-light);
+  --danger-dark: var(--dark-danger-dark);
+  --warning: var(--dark-warning);
+  --warning-light: var(--dark-warning-light);
+  --warning-dark: var(--dark-warning-dark);
+  --info: var(--dark-info);
+  --info-light: var(--dark-info-light);
+  --info-dark: var(--dark-info-dark);
+  --bg-primary: var(--dark-bg-primary);
+  --bg-secondary: var(--dark-bg-secondary);
+  --bg-tertiary: var(--dark-bg-tertiary);
+  --text-primary: var(--dark-text-primary);
+  --text-secondary: var(--dark-text-secondary);
+  --text-muted: var(--dark-text-muted);
+  --text-disabled: var(--dark-text-disabled);
+  --border-primary: var(--dark-border-primary);
+  --border-secondary: var(--dark-border-secondary);
+  --border-focus: var(--dark-border-focus);
+  --shadow-sm: var(--dark-shadow-sm);
+  --shadow-md: var(--dark-shadow-md);
+  --shadow-lg: var(--dark-shadow-lg);
+}
+
+/* Utility Classes */
+@layer utilities {
+  /* Background Colors */
+  .bg-primary {
+    background-color: var(--primary);
+  }
+
+  .bg-primary-hover {
+    background-color: var(--primary-hover);
+  }
+
+  .bg-primary-light {
+    background-color: var(--primary-light);
+  }
+
+  .bg-success {
+    background-color: var(--success);
+  }
+
+  .bg-success-light {
+    background-color: var(--success-light);
+  }
+
+  .bg-danger {
+    background-color: var(--danger);
+  }
+
+  .bg-danger-light {
+    background-color: var(--danger-light);
+  }
+
+  .bg-warning {
+    background-color: var(--warning);
+  }
+
+  .bg-warning-light {
+    background-color: var(--warning-light);
+  }
+
+  .bg-info {
+    background-color: var(--info);
+  }
+
+  .bg-info-light {
+    background-color: var(--info-light);
+  }
+
+  .bg-secondary {
+    background-color: var(--bg-secondary);
+  }
+
+  .bg-tertiary {
+    background-color: var(--bg-tertiary);
+  }
+
+  /* Text Colors */
+  .text-primary {
+    color: var(--text-primary);
+  }
+
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  .text-disabled {
+    color: var(--text-disabled);
+  }
+
+  .text-success {
+    color: var(--success);
+  }
+
+  .text-success-dark {
+    color: var(--success-dark);
+  }
+
+  .text-danger {
+    color: var(--danger);
+  }
+
+  .text-danger-dark {
+    color: var(--danger-dark);
+  }
+
+  .text-warning {
+    color: var(--warning);
+  }
+
+  .text-warning-dark {
+    color: var(--warning-dark);
+  }
+
+  .text-info {
+    color: var(--info);
+  }
+
+  .text-info-dark {
+    color: var(--info-dark);
+  }
+
+  /* Border Colors */
+  .border-primary {
+    border-color: var(--border-primary);
+  }
+
+  .border-secondary {
+    border-color: var(--border-secondary);
+  }
+
+  .border-focus {
+    border-color: var(--border-focus);
+  }
+
+  .border-success {
+    border-color: var(--success);
+  }
+
+  .border-danger {
+    border-color: var(--danger);
+  }
+
+  .border-warning {
+    border-color: var(--warning);
+  }
+
+  .border-info {
+    border-color: var(--info);
+  }
+
+  /* Shadows */
+  .shadow-sm {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .shadow-md {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-lg {
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Component Classes */
+  .card {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-primary);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Button Styles */
+  .btn-primary {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+  }
+
+  .btn-success {
+    background-color: var(--success);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .btn-danger {
+    background-color: var(--danger);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .btn-warning {
+    background-color: var(--warning);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .btn-outline:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  /* Input Styles */
+  .input {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-primary);
+    color: var(--text-primary);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+  }
+
+  .input:focus {
+    outline: none;
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px var(--primary-light);
+  }
+
+  .input::placeholder {
+    color: var(--text-muted);
+  }
+
+  /* Overview Card Specific Styles */
+  .overview-card {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-primary);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+  }
+
+  .overview-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .overview-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .overview-card-title {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .overview-card-value {
+    color: var(--text-primary);
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .overview-card-trend {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .trend-positive {
+    color: var(--success);
+  }
+
+  .trend-negative {
+    color: var(--danger);
+  }
+
+  .trend-neutral {
+    color: var(--text-muted);
+  }
+
+  /* Category Colors */
+  .category-food {
+    color: var(--category-food);
+  }
+
+  .category-transport {
+    color: var(--category-transport);
+  }
+
+  .category-entertainment {
+    color: var(--category-entertainment);
+  }
+
+  .category-shopping {
+    color: var(--category-shopping);
+  }
+
+  .category-health {
+    color: var(--category-health);
+  }
+
+  .category-bills {
+    color: var(--category-bills);
+  }
+
+  .category-income {
+    color: var(--category-income);
+  }
+
+  .category-savings {
+    color: var(--category-savings);
+  }
+}
