@@ -1,23 +1,26 @@
-import BudgetSection from "./components/BudgetSection";
-import ChartsSection from "./components/ChartsSection";
+import { useEffect } from "react";
 import DBCards from "./components/DBCards";
 import DBChartsNTables from "./components/DBChartsNTables";
 import Header from "./components/Header";
-import MainContent from "./components/MainContent";
-import OverviewCards from "./components/OverviewCards";
 import QuickActions from "./components/QuickActions";
+import { useStateContext } from "./providers/StateProvider";
 
 function App() {
+  const { showForm } = useStateContext();
+  useEffect(() => {
+    if (showForm) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+  }, [showForm]);
+
   return (
     <div className="min-h-screen bg-gray-200">
       <Header />
       <DBCards />
-      <DBChartsNTables />
-      <OverviewCards />
       <QuickActions />
-      <MainContent />
-      <ChartsSection />
-      <BudgetSection />
+      <DBChartsNTables />
     </div>
   );
 }
