@@ -7,6 +7,7 @@ import { useStateContext } from "./providers/StateProvider";
 
 function App() {
   const { showForm } = useStateContext();
+
   useEffect(() => {
     if (showForm) {
       document.body.style.overflowY = "hidden";
