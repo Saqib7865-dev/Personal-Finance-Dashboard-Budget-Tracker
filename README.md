@@ -111,10 +111,6 @@ Currently working on **backend integration** to add:
 - **💾 Database Integration**: Persistent data storage with full CRUD operations
 - **👤 Multi-user Support**: Individual user accounts with private financial data
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 📧 Contact
 
 **Saqib Ali** - [@saqib7865-dev](https://github.com/saqib7865-dev)
