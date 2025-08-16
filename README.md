@@ -119,7 +119,6 @@ Project Link: [Personal-Finance-Dashboard-Budget-Tracker](https://github.com/Saq
 
 ## 🙏 Acknowledgments
 
-- Inspired by YouTube finance management tutorials
 - Built with love for the personal finance community
 - Special thanks to the React and Chart.js communities
 
